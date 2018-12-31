@@ -13,7 +13,7 @@ import koneksi.koneksi;
 
 /**
  *
- * @author ASUS
+ * @author ngehe
  */
 public class Start_Menu extends javax.swing.JFrame {
 
@@ -60,6 +60,8 @@ public class Start_Menu extends javax.swing.JFrame {
         ttl = new javax.swing.JTextField();
         uname = new javax.swing.JTextField();
         pwd = new javax.swing.JTextField();
+        SCORE = new javax.swing.JDialog();
+        jPanel4 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         signin = new javax.swing.JButton();
@@ -253,6 +255,28 @@ public class Start_Menu extends javax.swing.JFrame {
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 716, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 708, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout SCORELayout = new javax.swing.GroupLayout(SCORE.getContentPane());
+        SCORE.getContentPane().setLayout(SCORELayout);
+        SCORELayout.setHorizontalGroup(
+            SCORELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        SCORELayout.setVerticalGroup(
+            SCORELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(java.awt.Color.pink);
@@ -263,6 +287,11 @@ public class Start_Menu extends javax.swing.JFrame {
 
         signin.setBackground(javax.swing.UIManager.getDefaults().getColor("CheckBoxMenuItem.selectionBackground"));
         signin.setText("SIGN IN");
+        signin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signinActionPerformed(evt);
+            }
+        });
 
         signup.setBackground(javax.swing.UIManager.getDefaults().getColor("CheckBoxMenuItem.selectionBackground"));
         signup.setText("SIGN UP");
@@ -274,6 +303,11 @@ public class Start_Menu extends javax.swing.JFrame {
 
         highscore.setBackground(javax.swing.UIManager.getDefaults().getColor("ComboBox.selectionBackground"));
         highscore.setText("HIGH SCORE");
+        highscore.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                highscoreActionPerformed(evt);
+            }
+        });
 
         exit.setBackground(javax.swing.UIManager.getDefaults().getColor("CheckBoxMenuItem.selectionBackground"));
         exit.setText("EXIT");
@@ -360,7 +394,9 @@ public class Start_Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_exitActionPerformed
 
     private void signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupActionPerformed
-
+        DAFTAR daf = new DAFTAR();
+        daf.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_signupActionPerformed
 
     private void cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelActionPerformed
@@ -368,6 +404,16 @@ public class Start_Menu extends javax.swing.JFrame {
         sm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_cancelActionPerformed
+
+    private void signinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signinActionPerformed
+        LOGIN log = new LOGIN();
+        log.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_signinActionPerformed
+
+    private void highscoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_highscoreActionPerformed
+         // TODO add your handling code here:
+    }//GEN-LAST:event_highscoreActionPerformed
 
     /**
      * @param args the command line arguments
@@ -407,6 +453,7 @@ public class Start_Menu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDialog DAFTAR;
     private javax.swing.JDialog LOGIN;
+    private javax.swing.JDialog SCORE;
     private javax.swing.JButton cancel;
     private javax.swing.JButton daftar;
     private javax.swing.JButton exit;
@@ -424,6 +471,7 @@ public class Start_Menu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JTextField jk;
     private javax.swing.JButton masuk;
     private javax.swing.JTextField nama;
