@@ -35,6 +35,7 @@ public class Start_Menu extends javax.swing.JFrame {
         con = DB.con;
         stat = DB.stm;
         this.setSize(965, 606);
+        //test
 //        konfigurasi_soal soal = new konfigurasi_soal();
 //        text_column.setText(soal.isi_soal());
 //        optionA.setText(soal.option_A());
