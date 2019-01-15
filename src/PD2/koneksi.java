@@ -22,7 +22,7 @@ public class koneksi {
     public void connect() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/game", "root", " ");
+            con = DriverManager.getConnection("jdbc:mysql://localhost/game", "root", "");
             stm = con.createStatement();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "koneksi gagal " + e.getMessage());
