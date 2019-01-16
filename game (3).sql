@@ -41,6 +41,7 @@ CREATE TABLE `login` (
 INSERT INTO `login` (`id`, `nama`, `email`, `username`, `password`) VALUES
 (1, 'Eka Novita', 'ekavita.30@gmail.com', 'eka123', 'eka123'),
 (2, 'Rinda', 'rin2813@gmail.com', 'rin', 'rin');
+(3, 'Limited Person', 'lmtd@rocketmail.co.id', ' ', ' ');
 
 -- --------------------------------------------------------
 
