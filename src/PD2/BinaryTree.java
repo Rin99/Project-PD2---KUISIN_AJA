@@ -1,115 +1,126 @@
 package PD2;
 
+class Node {
+
+    Node parent;
+    Node no;
+    Node yes;
+    int data;
+
+    public Node(int new_data) {
+        data = new_data;
+        parent = null;
+        no = null;
+        yes = null;
+    }
+
+    void set_parent(Node other) {
+        parent = other;
+        if (other != null) {
+            if (other.data > this.data) {
+                other.no = this;
+            } else {
+                other.yes = this;
+            }
+        }
+    }
+
+    void set_left(Node other) {
+        no = other;
+        if (other != null) {
+            other.parent = this;
+        }
+    }
+
+    void set_right(Node other) {
+        yes = other;
+        if (other != null) {
+            other.parent = this;
+        }
+    }
+
+    boolean has_right_and_left() {
+        return this.no != null && this.yes != null;
+    }
+
+    boolean only_has_left() {
+        return this.no != null && this.yes == null;
+    }
+
+    boolean only_has_right() {
+        return this.yes != null && this.no == null;
+    }
+
+    boolean has_no_child() {
+        return this.yes == null && this.no == null;
+    }
+
+    void print(String spaces, String label) {
+        System.out.println(spaces + label + data);
+        if (this.no != null) {
+            this.no.print("", "LEFT");
+        }
+        if (this.yes != null) {
+            this.yes.print(" ", "RIGHT");
+        }
+    }
+
+    void print() {
+        this.print("", "NODE ");
+    }
+    
+}
+
 public class BinaryTree {
 
-    BinaryTreeNode root;
+    Node root;
+    Node current;
 
     public BinaryTree() {
         this.root = null;
     }
-
-    /* call method print of root if root is not null */
-    void print() {
-        if (this.root != null) {
-            this.root.print();
-        }
+    
+    Node getRoot() {
+        return root;
     }
-    void push(BinaryTreeNode new_node) {
-        if (this.root == null) {
-            this.root = new_node;
+    
+    Node getCurrent() {
+        return current;
+    }
+
+    int getCurrentData() {
+        return current.data;
+    }
+
+    void push(Node new_node) {
+        if (root == null) {
+            root = new_node;
         } else {
-            BinaryTreeNode current = this.root;
+            Node current = root;
             while (current != null) {
                 if (new_node.data > current.data) {
-                    if (current.right == null) {
+                    if (current.yes == null) {
                         current.set_right(new_node);
                         break;
                     } else {
-                        current = current.right;
+                        current = current.yes;
                     }
-                } else if (current.left == null) {
-                    current.set_left(new_node);
-                    break;
                 } else {
-                    current = current.left;
+                    if (current.no == null) {
+                        current.set_left(new_node);
+                        break;
+                    } else {
+                        current = current.no;
+                    }
                 }
             }
         }
     }
 
-    void delete(BinaryTreeNode deleted) {
-        if (this.root != null) {
-            if (deleted.has_no_child()) {
-                if (deleted == this.root) {
-                    this.root = null;
-                } else {
-                    deleted.unset_parent();
-                }
-            } else if (deleted.only_has_left() || deleted.only_has_right()) {
-                BinaryTreeNode replacement = null;
-                if (deleted.only_has_left()) {
-                    replacement = deleted.left;
-                } else {
-                    replacement = deleted.right;
-                }
-                if (deleted == this.root) {
-                    this.root = replacement;
-                    this.root.unset_parent();
-                } else if (deleted.is_left()) {
-                    deleted.parent.set_left(replacement);
-                    deleted.unset_parent();
-                } else if (deleted.is_right()) {
-                    deleted.parent.set_right(replacement);
-                    deleted.unset_parent();
-                }
-            } else {
-                BinaryTreeNode replacement = deleted.left;
-                if (replacement.right != null) {
-                    replacement = replacement.most_right_child();
-                }
-                BinaryTreeNode parent_of_replacement = replacement.parent;
-                if (replacement.only_has_right()) {
-                    parent_of_replacement.set_left(replacement.right);
-                }
-                replacement.unset_parent();
-                replacement.set_left(deleted.left);
-                replacement.set_right(deleted.right);
-                if (deleted == this.root) {
-                    this.root = replacement;
-                } else if (deleted.is_left()) {
-                    deleted.parent.set_left(replacement);
-                } else if (deleted.is_right()) {
-                    deleted.parent.set_right(replacement);
-                }
-            }
+    void print() {
+        if (root != null) {
+            root.print();
         }
     }
-
-    public Boolean search(int value) {
-        BinaryTreeNode current = this.root;
-        while (current != null) {
-            if (current.data == value) {
-                return true;
-            } else if (value < current.data) {
-
-                if (current.left == null) {
-                    return false;
-                } else {
-                    current = current.left;
-                }
-
-            } else if (value > current.data) {
-
-                if (current.right == null) {
-                    return false;
-                } else {
-                    current = current.right;
-                }
-
-            }
-        }
-
-        return false;
-
-    }
+    
 }
