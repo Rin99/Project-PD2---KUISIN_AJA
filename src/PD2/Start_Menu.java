@@ -85,6 +85,11 @@ public class Start_Menu extends javax.swing.JFrame {
         kartun_button = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        NEW_GAME = new javax.swing.JDialog();
+        jPanel5 = new javax.swing.JPanel();
+        jButton6 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
         Game = new javax.swing.JDialog();
         jPanel7 = new javax.swing.JPanel();
         jButton12 = new javax.swing.JButton();
@@ -94,11 +99,6 @@ public class Start_Menu extends javax.swing.JFrame {
         optionB = new javax.swing.JRadioButton();
         kirim_game = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
-        NEW_GAME = new javax.swing.JDialog();
-        jPanel5 = new javax.swing.JPanel();
-        jButton6 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jLabel15 = new javax.swing.JLabel();
         Anime = new javax.swing.JDialog();
         jPanel9 = new javax.swing.JPanel();
         jButton13 = new javax.swing.JButton();
@@ -111,29 +111,38 @@ public class Start_Menu extends javax.swing.JFrame {
         kpop = new javax.swing.JDialog();
         jPanel10 = new javax.swing.JPanel();
         jButton14 = new javax.swing.JButton();
-        text_column2 = new javax.swing.JTextField();
-        optionA2 = new javax.swing.JRadioButton();
-        optionB2 = new javax.swing.JRadioButton();
-        jButton8 = new javax.swing.JButton();
+        option_yes1 = new javax.swing.JRadioButton();
+        option_no1 = new javax.swing.JRadioButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        soal_column1 = new javax.swing.JTextArea();
+        Kpop_kirim = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
         kdrama = new javax.swing.JDialog();
         jPanel11 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        soal_column2 = new javax.swing.JTextArea();
+        option_no2 = new javax.swing.JRadioButton();
+        option_yes2 = new javax.swing.JRadioButton();
         jButton15 = new javax.swing.JButton();
-        text_column3 = new javax.swing.JTextField();
-        optionA3 = new javax.swing.JRadioButton();
-        optionB3 = new javax.swing.JRadioButton();
         jButton16 = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
         kartun = new javax.swing.JDialog();
         jPanel12 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        soal_column3 = new javax.swing.JTextArea();
+        option_yes3 = new javax.swing.JRadioButton();
+        option_no3 = new javax.swing.JRadioButton();
         jButton17 = new javax.swing.JButton();
-        text_column4 = new javax.swing.JTextField();
-        optionA4 = new javax.swing.JRadioButton();
-        optionB4 = new javax.swing.JRadioButton();
-        jButton18 = new javax.swing.JButton();
+        kartun_kirim = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         radio = new javax.swing.ButtonGroup();
         anime_radio = new javax.swing.ButtonGroup();
+        kesimpulan = new javax.swing.JDialog();
+        jPanel4 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        ksmpln = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         signin = new javax.swing.JButton();
         signup = new javax.swing.JButton();
@@ -149,7 +158,7 @@ public class Start_Menu extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel3.setText("USERNAME");
         jPanel2.add(jLabel3);
-        jLabel3.setBounds(40, 100, 96, 30);
+        jLabel3.setBounds(40, 100, 92, 30);
 
         user.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -170,7 +179,7 @@ public class Start_Menu extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel4.setText("PASSWORD");
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(40, 140, 103, 30);
+        jLabel4.setBounds(40, 140, 95, 30);
 
         masuk.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         masuk.setText("Masuk");
@@ -180,7 +189,7 @@ public class Start_Menu extends javax.swing.JFrame {
             }
         });
         jPanel2.add(masuk);
-        masuk.setBounds(250, 200, 90, 33);
+        masuk.setBounds(250, 200, 90, 29);
 
         back.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         back.setText("Kembali");
@@ -215,7 +224,7 @@ public class Start_Menu extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel12.setText("E-mail");
         jPanel8.add(jLabel12);
-        jLabel12.setBounds(70, 120, 51, 30);
+        jLabel12.setBounds(70, 120, 52, 30);
 
         cancel.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         cancel.setText("Back");
@@ -225,12 +234,12 @@ public class Start_Menu extends javax.swing.JFrame {
             }
         });
         jPanel8.add(cancel);
-        cancel.setBounds(130, 240, 90, 33);
+        cancel.setBounds(130, 240, 90, 29);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel9.setText("Username");
         jPanel8.add(jLabel9);
-        jLabel9.setBounds(40, 160, 89, 30);
+        jLabel9.setBounds(40, 160, 82, 30);
 
         pwd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -250,7 +259,7 @@ public class Start_Menu extends javax.swing.JFrame {
             }
         });
         jPanel8.add(daftar);
-        daftar.setBounds(270, 240, 90, 33);
+        daftar.setBounds(270, 240, 90, 29);
 
         nama.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -263,12 +272,12 @@ public class Start_Menu extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel10.setText("Password");
         jPanel8.add(jLabel10);
-        jLabel10.setBounds(40, 200, 87, 30);
+        jLabel10.setBounds(40, 200, 78, 30);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel6.setText("Nama");
         jPanel8.add(jLabel6);
-        jLabel6.setBounds(70, 80, 49, 30);
+        jLabel6.setBounds(70, 80, 47, 30);
         jPanel8.add(email);
         email.setBounds(130, 120, 230, 30);
 
@@ -370,65 +379,6 @@ public class Start_Menu extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        Game.setMinimumSize(new java.awt.Dimension(800, 496));
-
-        jPanel7.setLayout(null);
-
-        jButton12.setText("LOGOUT");
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
-            }
-        });
-        jPanel7.add(jButton12);
-        jButton12.setBounds(20, 520, 130, 50);
-
-        game_text.setColumns(20);
-        game_text.setLineWrap(true);
-        game_text.setRows(5);
-        jScrollPane2.setViewportView(game_text);
-
-        jPanel7.add(jScrollPane2);
-        jScrollPane2.setBounds(110, 200, 730, 110);
-
-        radio.add(optionA);
-        optionA.setForeground(java.awt.Color.white);
-        jPanel7.add(optionA);
-        optionA.setBounds(220, 360, 21, 22);
-
-        radio.add(optionB);
-        optionB.setForeground(java.awt.Color.white);
-        jPanel7.add(optionB);
-        optionB.setBounds(670, 360, 21, 22);
-
-        kirim_game.setText("Kirim");
-        kirim_game.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                kirim_gameActionPerformed(evt);
-            }
-        });
-        jPanel7.add(kirim_game);
-        kirim_game.setBounds(410, 410, 120, 50);
-
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PD2/image/mainmenu.jpg"))); // NOI18N
-        jPanel7.add(jLabel13);
-        jLabel13.setBounds(0, 0, 950, 576);
-
-        javax.swing.GroupLayout GameLayout = new javax.swing.GroupLayout(Game.getContentPane());
-        Game.getContentPane().setLayout(GameLayout);
-        GameLayout.setHorizontalGroup(
-            GameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(GameLayout.createSequentialGroup()
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        GameLayout.setVerticalGroup(
-            GameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(GameLayout.createSequentialGroup()
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 576, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
         NEW_GAME.setIconImage(null);
 
         jPanel5.setMinimumSize(new java.awt.Dimension(400, 300));
@@ -467,11 +417,75 @@ public class Start_Menu extends javax.swing.JFrame {
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        Game.setMinimumSize(new java.awt.Dimension(800, 496));
+
+        jPanel7.setLayout(null);
+
+        jButton12.setText("LOGOUT");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(jButton12);
+        jButton12.setBounds(20, 520, 130, 50);
+
+        game_text.setColumns(20);
+        game_text.setLineWrap(true);
+        game_text.setRows(5);
+        jScrollPane2.setViewportView(game_text);
+
+        jPanel7.add(jScrollPane2);
+        jScrollPane2.setBounds(110, 200, 730, 110);
+
+        radio.add(optionA);
+        optionA.setForeground(java.awt.Color.white);
+        optionA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                optionAActionPerformed(evt);
+            }
+        });
+        jPanel7.add(optionA);
+        optionA.setBounds(110, 360, 340, 21);
+
+        radio.add(optionB);
+        optionB.setForeground(java.awt.Color.white);
+        jPanel7.add(optionB);
+        optionB.setBounds(470, 360, 360, 21);
+
+        kirim_game.setText("Kirim");
+        kirim_game.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kirim_gameActionPerformed(evt);
+            }
+        });
+        jPanel7.add(kirim_game);
+        kirim_game.setBounds(410, 410, 120, 50);
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PD2/image/mainmenu.jpg"))); // NOI18N
+        jPanel7.add(jLabel13);
+        jLabel13.setBounds(0, 0, 950, 576);
+
+        javax.swing.GroupLayout GameLayout = new javax.swing.GroupLayout(Game.getContentPane());
+        Game.getContentPane().setLayout(GameLayout);
+        GameLayout.setHorizontalGroup(
+            GameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GameLayout.createSequentialGroup()
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        GameLayout.setVerticalGroup(
+            GameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GameLayout.createSequentialGroup()
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 576, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
         Anime.setMinimumSize(new java.awt.Dimension(800, 496));
 
         jPanel9.setLayout(null);
 
-        jButton13.setText("LOGOUT");
+        jButton13.setText("EXIT");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton13ActionPerformed(evt);
@@ -483,12 +497,12 @@ public class Start_Menu extends javax.swing.JFrame {
         anime_radio.add(option_yes);
         option_yes.setText("jRadioButton1");
         jPanel9.add(option_yes);
-        option_yes.setBounds(170, 350, 102, 22);
+        option_yes.setBounds(90, 350, 390, 23);
 
         anime_radio.add(option_no);
         option_no.setText("jRadioButton2");
         jPanel9.add(option_no);
-        option_no.setBounds(500, 350, 102, 22);
+        option_no.setBounds(490, 350, 360, 23);
 
         anime_kirim.setText("Kirim");
         anime_kirim.addActionListener(new java.awt.event.ActionListener() {
@@ -497,7 +511,7 @@ public class Start_Menu extends javax.swing.JFrame {
             }
         });
         jPanel9.add(anime_kirim);
-        anime_kirim.setBounds(290, 410, 120, 50);
+        anime_kirim.setBounds(420, 410, 120, 50);
 
         soal_column.setColumns(20);
         soal_column.setLineWrap(true);
@@ -505,7 +519,7 @@ public class Start_Menu extends javax.swing.JFrame {
         jScrollPane1.setViewportView(soal_column);
 
         jPanel9.add(jScrollPane1);
-        jScrollPane1.setBounds(90, 210, 650, 87);
+        jScrollPane1.setBounds(90, 210, 760, 96);
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PD2/image/mainmenu.jpg"))); // NOI18N
         jPanel9.add(jLabel14);
@@ -530,30 +544,41 @@ public class Start_Menu extends javax.swing.JFrame {
 
         jPanel10.setLayout(null);
 
-        jButton14.setText("LOGOUT");
+        jButton14.setText("EXIT");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton14ActionPerformed(evt);
             }
         });
         jPanel10.add(jButton14);
-        jButton14.setBounds(20, 540, 100, 31);
+        jButton14.setBounds(20, 540, 100, 23);
 
-        text_column2.setEditable(false);
-        jPanel10.add(text_column2);
-        text_column2.setBounds(100, 190, 760, 130);
+        anime_radio.add(option_yes1);
+        option_yes1.setText("jRadioButton1");
+        jPanel10.add(option_yes1);
+        option_yes1.setBounds(90, 350, 340, 23);
 
-        optionA2.setForeground(java.awt.Color.white);
-        jPanel10.add(optionA2);
-        optionA2.setBounds(110, 360, 21, 22);
+        anime_radio.add(option_no1);
+        option_no1.setText("jRadioButton2");
+        jPanel10.add(option_no1);
+        option_no1.setBounds(490, 350, 360, 23);
 
-        optionB2.setForeground(java.awt.Color.white);
-        jPanel10.add(optionB2);
-        optionB2.setBounds(510, 360, 21, 22);
+        soal_column1.setColumns(20);
+        soal_column1.setLineWrap(true);
+        soal_column1.setRows(5);
+        jScrollPane3.setViewportView(soal_column1);
 
-        jButton8.setText("Kirim");
-        jPanel10.add(jButton8);
-        jButton8.setBounds(460, 500, 120, 50);
+        jPanel10.add(jScrollPane3);
+        jScrollPane3.setBounds(90, 210, 760, 96);
+
+        Kpop_kirim.setText("Kirim");
+        Kpop_kirim.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Kpop_kirimActionPerformed(evt);
+            }
+        });
+        jPanel10.add(Kpop_kirim);
+        Kpop_kirim.setBounds(430, 400, 120, 50);
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PD2/image/mainmenu.jpg"))); // NOI18N
         jPanel10.add(jLabel16);
@@ -578,6 +603,24 @@ public class Start_Menu extends javax.swing.JFrame {
 
         jPanel11.setLayout(null);
 
+        soal_column2.setColumns(20);
+        soal_column2.setLineWrap(true);
+        soal_column2.setRows(5);
+        jScrollPane4.setViewportView(soal_column2);
+
+        jPanel11.add(jScrollPane4);
+        jScrollPane4.setBounds(90, 210, 760, 96);
+
+        anime_radio.add(option_no2);
+        option_no2.setText("jRadioButton2");
+        jPanel11.add(option_no2);
+        option_no2.setBounds(490, 350, 360, 23);
+
+        anime_radio.add(option_yes2);
+        option_yes2.setText("jRadioButton1");
+        jPanel11.add(option_yes2);
+        option_yes2.setBounds(90, 350, 340, 23);
+
         jButton15.setText("LOGOUT");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -585,23 +628,16 @@ public class Start_Menu extends javax.swing.JFrame {
             }
         });
         jPanel11.add(jButton15);
-        jButton15.setBounds(20, 540, 100, 31);
-
-        text_column3.setEditable(false);
-        jPanel11.add(text_column3);
-        text_column3.setBounds(100, 190, 760, 130);
-
-        optionA3.setForeground(java.awt.Color.white);
-        jPanel11.add(optionA3);
-        optionA3.setBounds(110, 360, 21, 22);
-
-        optionB3.setForeground(java.awt.Color.white);
-        jPanel11.add(optionB3);
-        optionB3.setBounds(510, 360, 21, 22);
+        jButton15.setBounds(20, 540, 100, 23);
 
         jButton16.setText("Kirim");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
         jPanel11.add(jButton16);
-        jButton16.setBounds(460, 500, 120, 50);
+        jButton16.setBounds(420, 410, 120, 50);
 
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PD2/image/mainmenu.jpg"))); // NOI18N
         jPanel11.add(jLabel17);
@@ -626,6 +662,24 @@ public class Start_Menu extends javax.swing.JFrame {
 
         jPanel12.setLayout(null);
 
+        soal_column3.setColumns(20);
+        soal_column3.setLineWrap(true);
+        soal_column3.setRows(5);
+        jScrollPane5.setViewportView(soal_column3);
+
+        jPanel12.add(jScrollPane5);
+        jScrollPane5.setBounds(90, 210, 760, 96);
+
+        anime_radio.add(option_yes3);
+        option_yes3.setText("jRadioButton1");
+        jPanel12.add(option_yes3);
+        option_yes3.setBounds(90, 350, 340, 23);
+
+        anime_radio.add(option_no3);
+        option_no3.setText("jRadioButton2");
+        jPanel12.add(option_no3);
+        option_no3.setBounds(490, 350, 360, 23);
+
         jButton17.setText("LOGOUT");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -633,23 +687,16 @@ public class Start_Menu extends javax.swing.JFrame {
             }
         });
         jPanel12.add(jButton17);
-        jButton17.setBounds(20, 540, 100, 31);
+        jButton17.setBounds(20, 540, 100, 23);
 
-        text_column4.setEditable(false);
-        jPanel12.add(text_column4);
-        text_column4.setBounds(100, 190, 760, 130);
-
-        optionA4.setForeground(java.awt.Color.white);
-        jPanel12.add(optionA4);
-        optionA4.setBounds(110, 360, 21, 22);
-
-        optionB4.setForeground(java.awt.Color.white);
-        jPanel12.add(optionB4);
-        optionB4.setBounds(510, 360, 21, 22);
-
-        jButton18.setText("Kirim");
-        jPanel12.add(jButton18);
-        jButton18.setBounds(460, 500, 120, 50);
+        kartun_kirim.setText("Kirim");
+        kartun_kirim.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kartun_kirimActionPerformed(evt);
+            }
+        });
+        jPanel12.add(kartun_kirim);
+        kartun_kirim.setBounds(420, 410, 120, 50);
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PD2/image/mainmenu.jpg"))); // NOI18N
         jPanel12.add(jLabel18);
@@ -667,6 +714,50 @@ public class Start_Menu extends javax.swing.JFrame {
             kartunLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(kartunLayout.createSequentialGroup()
                 .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, 576, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel4.setLayout(null);
+
+        jButton1.setText("EXIT");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton1);
+        jButton1.setBounds(490, 470, 120, 40);
+
+        jButton2.setText("NEW GAME");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton2);
+        jButton2.setBounds(340, 470, 120, 40);
+
+        ksmpln.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        ksmpln.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel4.add(ksmpln);
+        ksmpln.setBounds(50, 220, 840, 210);
+
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PD2/image/mainmenu.jpg"))); // NOI18N
+        jPanel4.add(jLabel19);
+        jLabel19.setBounds(0, 0, 950, 576);
+
+        javax.swing.GroupLayout kesimpulanLayout = new javax.swing.GroupLayout(kesimpulan.getContentPane());
+        kesimpulan.getContentPane().setLayout(kesimpulanLayout);
+        kesimpulanLayout.setHorizontalGroup(
+            kesimpulanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kesimpulanLayout.createSequentialGroup()
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        kesimpulanLayout.setVerticalGroup(
+            kesimpulanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kesimpulanLayout.createSequentialGroup()
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 576, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -825,27 +916,39 @@ public class Start_Menu extends javax.swing.JFrame {
     private void game_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_game_buttonActionPerformed
 //        System.out.println(soal.getRoot().data);
 //        try {
-//            sql = "SELECT * from soal where id_soal = '" + soal.getRoot().data + "'";
+//            sql = "SELECT * from soal where id_soal = '" + "GM0" + String.valueOf(soal.root.data) + "'";
 //            rs = stat.executeQuery(sql);
 //            if (rs.next()) {
-//                soal_column.setText(rs.getString("soal"));
-//                optionA1.setText(rs.getString("opsi_1"));
-//                optionB1.setText(rs.getString("opsi_2"));
+//                game_text.setText(rs.getString("soal"));
+//                optionA.setText(rs.getString("opsi1"));
+//                optionB.setText(rs.getString("opsi2"));
 //                Game.setVisible(true);
 //                Game.setSize(965, 606);
 //                kategori_game.dispose();
+//
 //            }
 //        } catch (SQLException ex) {
 //            Logger.getLogger(Start_Menu.class.getName()).log(Level.SEVERE, null, ex);
 //        }
-
-
     }//GEN-LAST:event_game_buttonActionPerformed
 
     private void drama_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_drama_buttonActionPerformed
-        kdrama.setVisible(true);
-        kdrama.setSize(965, 606);
-        kategori_game.dispose();
+//        System.out.println(soal.getRoot().data);
+//        try {
+//            sql = "SELECT * from soal where id_soal = '" + "KD0" + String.valueOf(soal.root.data) + "'";
+//            rs = stat.executeQuery(sql);
+//            if (rs.next()) {
+//                soal_column2.setText(rs.getString("soal"));
+//                option_yes2.setText(rs.getString("opsi1"));
+//                option_no2.setText(rs.getString("opsi2"));
+//                kdrama.setVisible(true);
+//                kdrama.setSize(965, 606);
+//                kategori_game.dispose();
+//
+//            }
+//        } catch (SQLException ex) {
+//            Logger.getLogger(Start_Menu.class.getName()).log(Level.SEVERE, null, ex);
+//        }
     }//GEN-LAST:event_drama_buttonActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
@@ -854,9 +957,22 @@ public class Start_Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void kpop_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kpop_buttonActionPerformed
-        kpop.setVisible(true);
-        kpop.setSize(965, 606);
-        kategori_game.dispose();
+//        System.out.println(soal.getRoot().data);
+//        try {
+//            sql = "SELECT * from soal where id_soal = '" + "KP0" + String.valueOf(soal.root.data) + "'";
+//            rs = stat.executeQuery(sql);
+//            if (rs.next()) {
+//                soal_column1.setText(rs.getString("soal"));
+//                option_yes1.setText(rs.getString("opsi1"));
+//                option_no1.setText(rs.getString("opsi2"));
+//                kpop.setVisible(true);
+//                kpop.setSize(965, 606);
+//                kategori_game.dispose();
+//
+//            }
+//        } catch (SQLException ex) {
+//            Logger.getLogger(Start_Menu.class.getName()).log(Level.SEVERE, null, ex);
+//        }
     }//GEN-LAST:event_kpop_buttonActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -892,32 +1008,62 @@ public class Start_Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_anime_buttonActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        this.setVisible(true);
+        kategori_game.setVisible(true);
+        soal.current = soal.root;
         user.setText("");
         pass.setText("");
         Game.dispose();
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        // TODO add your handling code here:
+        kategori_game.setVisible(true);
+        soal.current = soal.root;
+        user.setText("");
+        pass.setText("");
+        Anime.dispose();
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        // TODO add your handling code here:
+        kategori_game.setVisible(true);
+        soal.current = soal.root;
+        user.setText("");
+        pass.setText("");
+        kpop.dispose();
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        // TODO add your handling code here:
+        kategori_game.setVisible(true);
+        soal.current = soal.root;
+        user.setText("");
+        pass.setText("");
+        kdrama.dispose();
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        // TODO add your handling code here:
+        kategori_game.setVisible(true);
+        soal.current = soal.root;
+        user.setText("");
+        pass.setText("");
+        kartun.dispose();
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void kartun_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kartun_buttonActionPerformed
-        kartun.setVisible(true);
-        kartun.setSize(965, 606);
-        kategori_game.dispose();
+//        System.out.println(soal.getRoot().data);
+//        try {
+//            sql = "SELECT * from soal where id_soal = '" + "KT0" + String.valueOf(soal.root.data) + "'";
+//            rs = stat.executeQuery(sql);
+//            if (rs.next()) {
+//                soal_column3.setText(rs.getString("soal"));
+//                option_yes3.setText(rs.getString("opsi1"));
+//                option_no3.setText(rs.getString("opsi2"));
+//                kartun.setVisible(true);
+//                kartun.setSize(965, 606);
+//                kategori_game.dispose();
+//
+//            }
+//        } catch (SQLException ex) {
+//            Logger.getLogger(Start_Menu.class.getName()).log(Level.SEVERE, null, ex);
+//        }
     }//GEN-LAST:event_kartun_buttonActionPerformed
 
     private void anime_kirimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anime_kirimActionPerformed
@@ -964,9 +1110,10 @@ public class Start_Menu extends javax.swing.JFrame {
                     sql = "SELECT soal from soal where id_soal = '" + "AN0" + String.valueOf(soal.getCurrentData()) + "'";
                     rs = stat.executeQuery(sql);
                     if (rs.next()) {
+                        kesimpulan.setVisible(true);
+                        kesimpulan.setSize(965, 606);
                         Anime.dispose();
-                        JOptionPane.showMessageDialog(null, rs.getString("soal"));
-
+                        ksmpln.setText(rs.getString("soal"));
                     }
                 } catch (SQLException ex) {
                     Logger.getLogger(Start_Menu.class.getName()).log(Level.SEVERE, null, ex);
@@ -978,17 +1125,17 @@ public class Start_Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_anime_kirimActionPerformed
 
     private void kirim_gameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kirim_gameActionPerformed
-//        while (soal.current != null) {
-//            if (optionA1.isSelected()) {
+//       while (soal.current != null) {
+//            if (optionA.isSelected()) {
 //                soal.current = soal.current.yes;
 //                System.out.println(soal.getCurrentData());
 //                try {
-//                    sql = "SELECT * from soal where id_soal = '" + soal.getCurrentData() + "'";
+//                    sql = "SELECT * from soal where id_soal = '" + "GM0" + String.valueOf(soal.getCurrentData()) + "'";
 //                    rs = stat.executeQuery(sql);
 //                    if (rs.next()) {
 //                        game_text.setText(rs.getString("soal"));
-//                        optionA1.setText(rs.getString("opsi_1"));
-//                        optionB1.setText(rs.getString("opsi_2"));
+//                        optionA.setText(rs.getString("opsi1"));
+//                        optionB.setText(rs.getString("opsi2"));
 //                        Game.setVisible(true);
 //                        Game.setSize(965, 606);
 //                        this.dispose();
@@ -998,16 +1145,16 @@ public class Start_Menu extends javax.swing.JFrame {
 //                    Logger.getLogger(Start_Menu.class.getName()).log(Level.SEVERE, null, ex);
 //                }
 //            }
-//            if (optionB1.isSelected()) {
+//            if (optionB.isSelected()) {
 //                soal.current = soal.current.no;
 //                System.out.println(soal.getCurrentData());
 //                try {
-//                    sql = "SELECT * from soal where id_soal = '" + soal.getCurrentData() + "'";
+//                    sql = "SELECT * from soal where id_soal = '" + "KP0" + String.valueOf(soal.getCurrentData()) + "'";
 //                    rs = stat.executeQuery(sql);
 //                    if (rs.next()) {
 //                        game_text.setText(rs.getString("soal"));
-//                        optionA1.setText(rs.getString("opsi_1"));
-//                        optionB1.setText(rs.getString("opsi_2"));
+//                        optionA.setText(rs.getString("opsi1"));
+//                        optionB.setText(rs.getString("opsi2"));
 //                        Game.setVisible(true);
 //                        Game.setSize(965, 606);
 //                        this.dispose();
@@ -1018,11 +1165,13 @@ public class Start_Menu extends javax.swing.JFrame {
 //            }
 //            if (soal.current.has_no_child()) {
 //                try {
-//                    sql = "SELECT soal from soal where id_soal = '" + soal.getCurrentData() + "'";
+//                    sql = "SELECT soal from soal where id_soal = '" + "KP0" + String.valueOf(soal.getCurrentData()) + "'";
 //                    rs = stat.executeQuery(sql);
 //                    if (rs.next()) {
-//                        JOptionPane.showMessageDialog(null, rs.getString("soal"));
+//                        kesimpulan.setVisible(true);
+//                        kesimpulan.setSize(965, 606);
 //                        Game.dispose();
+//                        ksmpln.setText(rs.getString("soal"));
 //                    }
 //                } catch (SQLException ex) {
 //                    Logger.getLogger(Start_Menu.class.getName()).log(Level.SEVERE, null, ex);
@@ -1032,6 +1181,195 @@ public class Start_Menu extends javax.swing.JFrame {
 //            break;
 //        }
     }//GEN-LAST:event_kirim_gameActionPerformed
+
+    private void Kpop_kirimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Kpop_kirimActionPerformed
+//       while (soal.current != null) {
+//            if (option_yes1.isSelected()) {
+//                soal.current = soal.current.yes;
+//                System.out.println(soal.getCurrentData());
+//                try {
+//                    sql = "SELECT * from soal where id_soal = '" + "KP0" + String.valueOf(soal.getCurrentData()) + "'";
+//                    rs = stat.executeQuery(sql);
+//                    if (rs.next()) {
+//                        soal_column1.setText(rs.getString("soal"));
+//                        option_yes1.setText(rs.getString("opsi1"));
+//                        option_no1.setText(rs.getString("opsi2"));
+//                        kpop.setVisible(true);
+//                        kpop.setSize(965, 606);
+//                        this.dispose();
+//
+//                    }
+//                } catch (SQLException ex) {
+//                    Logger.getLogger(Start_Menu.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//            }
+//            if (option_no1.isSelected()) {
+//                soal.current = soal.current.no;
+//                System.out.println(soal.getCurrentData());
+//                try {
+//                    sql = "SELECT * from soal where id_soal = '" + "KP0" + String.valueOf(soal.getCurrentData()) + "'";
+//                    rs = stat.executeQuery(sql);
+//                    if (rs.next()) {
+//                        soal_column1.setText(rs.getString("soal"));
+//                        option_yes1.setText(rs.getString("opsi1"));
+//                        option_no1.setText(rs.getString("opsi2"));
+//                        kpop.setVisible(true);
+//                        kpop.setSize(965, 606);
+//                        this.dispose();
+//                    }
+//                } catch (SQLException ex) {
+//                    Logger.getLogger(Start_Menu.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//            }
+//            if (soal.current.has_no_child()) {
+//                try {
+//                    sql = "SELECT soal from soal where id_soal = '" + "KP0" + String.valueOf(soal.getCurrentData()) + "'";
+//                    rs = stat.executeQuery(sql);
+//                    if (rs.next()) {
+//                        kesimpulan.setVisible(true);
+//                        kesimpulan.setSize(965, 606);
+//                        kpop.dispose();
+//                        ksmpln.setText(rs.getString("soal"));
+//                    }
+//                } catch (SQLException ex) {
+//                    Logger.getLogger(Start_Menu.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//                break;
+//            }
+//            break;
+//        }
+    }//GEN-LAST:event_Kpop_kirimActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        soal.current = soal.root;
+        kategori_game.setVisible(true);
+        kategori_game.setSize(965, 606);
+        kesimpulan.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void optionAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optionAActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_optionAActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        //       while (soal.current != null) {
+//            if (option_yes2.isSelected()) {
+//                soal.current = soal.current.yes;
+//                System.out.println(soal.getCurrentData());
+//                try {
+//                    sql = "SELECT * from soal where id_soal = '" + "KD0" + String.valueOf(soal.getCurrentData()) + "'";
+//                    rs = stat.executeQuery(sql);
+//                    if (rs.next()) {
+//                        soal_column2.setText(rs.getString("soal"));
+//                        option_yes2.setText(rs.getString("opsi1"));
+//                        option_no2.setText(rs.getString("opsi2"));
+//                        kdrama.setVisible(true);
+//                        kdrama.setSize(965, 606);
+//                        this.dispose();
+//
+//                    }
+//                } catch (SQLException ex) {
+//                    Logger.getLogger(Start_Menu.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//            }
+//            if (option_no2.isSelected()) {
+//                soal.current = soal.current.no;
+//                System.out.println(soal.getCurrentData());
+//                try {
+//                    sql = "SELECT * from soal where id_soal = '" + "KD0" + String.valueOf(soal.getCurrentData()) + "'";
+//                    rs = stat.executeQuery(sql);
+//                    if (rs.next()) {
+//                        soal_column2.setText(rs.getString("soal"));
+//                        option_yes2.setText(rs.getString("opsi1"));
+//                        option_no2.setText(rs.getString("opsi2"));
+//                        kdrama.setVisible(true);
+//                        kdrama.setSize(965, 606);
+//                        this.dispose();
+//                    }
+//                } catch (SQLException ex) {
+//                    Logger.getLogger(Start_Menu.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//            }
+//            if (soal.current.has_no_child()) {
+//                try {
+//                    sql = "SELECT soal from soal where id_soal = '" + "KD0" + String.valueOf(soal.getCurrentData()) + "'";
+//                    rs = stat.executeQuery(sql);
+//                    if (rs.next()) {
+//                        kesimpulan.setVisible(true);
+//                        kesimpulan.setSize(965, 606);
+//                        kdrama.dispose();
+//                        ksmpln.setText(rs.getString("soal"));
+//                    }
+//                } catch (SQLException ex) {
+//                    Logger.getLogger(Start_Menu.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//                break;
+//            }
+//            break;
+//        }
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void kartun_kirimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kartun_kirimActionPerformed
+//        while (soal.current != null) {
+//            if (option_yes3.isSelected()) {
+//                soal.current = soal.current.yes;
+//                System.out.println(soal.getCurrentData());
+//                try {
+//                    sql = "SELECT * from soal where id_soal = '" + "KT0" + String.valueOf(soal.getCurrentData()) + "'";
+//                    rs = stat.executeQuery(sql);
+//                    if (rs.next()) {
+//                        soal_column3.setText(rs.getString("soal"));
+//                        option_yes3.setText(rs.getString("opsi1"));
+//                        option_no3.setText(rs.getString("opsi2"));
+//                        kartun.setVisible(true);
+//                        kartun.setSize(965, 606);
+//                        this.dispose();
+//
+//                    }
+//                } catch (SQLException ex) {
+//                    Logger.getLogger(Start_Menu.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//            }
+//            if (option_no3.isSelected()) {
+//                soal.current = soal.current.no;
+//                System.out.println(soal.getCurrentData());
+//                try {
+//                    sql = "SELECT * from soal where id_soal = '" + "KT0" + String.valueOf(soal.getCurrentData()) + "'";
+//                    rs = stat.executeQuery(sql);
+//                    if (rs.next()) {
+//                        soal_column3.setText(rs.getString("soal"));
+//                        option_yes3.setText(rs.getString("opsi1"));
+//                        option_no3.setText(rs.getString("opsi2"));
+//                        kartun.setVisible(true);
+//                        kartun.setSize(965, 606);
+//                        this.dispose();
+//                    }
+//                } catch (SQLException ex) {
+//                    Logger.getLogger(Start_Menu.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//            }
+//            if (soal.current.has_no_child()) {
+//                try {
+//                    sql = "SELECT soal from soal where id_soal = '" + "KT0" + String.valueOf(soal.getCurrentData()) + "'";
+//                    rs = stat.executeQuery(sql);
+//                    if (rs.next()) {
+//                        kesimpulan.setVisible(true);
+//                        kesimpulan.setSize(965, 606);
+//                        kartun.dispose();
+//                        ksmpln.setText(rs.getString("soal"));
+//                    }
+//                } catch (SQLException ex) {
+//                    Logger.getLogger(Start_Menu.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//                break;
+//            }
+//            break;
+//        }
+    }//GEN-LAST:event_kartun_kirimActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1076,6 +1414,7 @@ public class Start_Menu extends javax.swing.JFrame {
     private javax.swing.JDialog Anime;
     private javax.swing.JDialog DAFTAR;
     private javax.swing.JDialog Game;
+    private javax.swing.JButton Kpop_kirim;
     private javax.swing.JDialog LOGIN;
     private javax.swing.JDialog NEW_GAME;
     private javax.swing.JButton anime_button;
@@ -1090,6 +1429,7 @@ public class Start_Menu extends javax.swing.JFrame {
     private javax.swing.JButton game_button;
     private javax.swing.JTextArea game_text;
     private javax.swing.JButton highscore;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
@@ -1097,9 +1437,8 @@ public class Start_Menu extends javax.swing.JFrame {
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1110,6 +1449,7 @@ public class Start_Menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1124,40 +1464,47 @@ public class Start_Menu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JDialog kartun;
     private javax.swing.JButton kartun_button;
+    private javax.swing.JButton kartun_kirim;
     private javax.swing.JDialog kategori_game;
     private javax.swing.JDialog kdrama;
+    private javax.swing.JDialog kesimpulan;
     private javax.swing.JButton kirim_game;
     private javax.swing.JDialog kpop;
     private javax.swing.JButton kpop_button;
+    private javax.swing.JLabel ksmpln;
     private javax.swing.JButton masuk;
     private javax.swing.JTextField nama;
     private javax.swing.JRadioButton optionA;
-    private javax.swing.JRadioButton optionA2;
-    private javax.swing.JRadioButton optionA3;
-    private javax.swing.JRadioButton optionA4;
     private javax.swing.JRadioButton optionB;
-    private javax.swing.JRadioButton optionB2;
-    private javax.swing.JRadioButton optionB3;
-    private javax.swing.JRadioButton optionB4;
     private javax.swing.JRadioButton option_no;
+    private javax.swing.JRadioButton option_no1;
+    private javax.swing.JRadioButton option_no2;
+    private javax.swing.JRadioButton option_no3;
     private javax.swing.JRadioButton option_yes;
+    private javax.swing.JRadioButton option_yes1;
+    private javax.swing.JRadioButton option_yes2;
+    private javax.swing.JRadioButton option_yes3;
     private javax.swing.JPasswordField pass;
     private javax.swing.JPasswordField pwd;
     private javax.swing.ButtonGroup radio;
     private javax.swing.JButton signin;
     private javax.swing.JButton signup;
     private javax.swing.JTextArea soal_column;
-    private javax.swing.JTextField text_column2;
-    private javax.swing.JTextField text_column3;
-    private javax.swing.JTextField text_column4;
+    private javax.swing.JTextArea soal_column1;
+    private javax.swing.JTextArea soal_column2;
+    private javax.swing.JTextArea soal_column3;
     private javax.swing.JTextField uname;
     private javax.swing.JTextField user;
     // End of variables declaration//GEN-END:variables
